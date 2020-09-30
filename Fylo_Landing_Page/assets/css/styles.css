@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -10,4 +11,136 @@ ul {
 }
 a {
   text-decoration: none;
+}
+input {
+  outline: none;
+}
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+
+body {
+  color: hsl(243, 87%, 12%);
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  max-width: 100%;
+  max-width: 1200px;
+}
+
+header,
+section {
+  padding: 1.2rem;
+}
+
+.flexbox {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox > div {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  justify-content: space-between;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > ul > li {
+  margin-left: 1.5rem;
+}
+
+nav ul a {
+  color: hsl(243, 87%, 12%);
+  font-family: "Raleway", sans-serif;
+}
+form {
+  display: flex;
+}
+header .flexbox {
+  margin-top: 6rem;
+}
+header input {
+  flex: 0.5;
+  border: 1px solid hsl(243, 87%, 12%);
+  border-radius: 2px;
+  padding: 0.8rem;
+}
+
+button {
+  border: 1px solid hsl(224, 93%, 58%);
+  background-color: hsl(224, 93%, 58%);
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.8rem;
+  flex: 0.3;
+  margin-left: 0.8rem;
+}
+
+.imgwrapper {
+  margin-left: 1.2rem;
+}
+
+.light-bluebox {
+  background-color: hsl(240, 75%, 98%);
+  margin-top: 6rem;
+  padding: 3rem 1.2rem;
+  position: relative;
+}
+
+.light-bluebox::before {
+  content: "";
+  background-image: url("../images/bg-curve-desktop.svg");
+  background-size: cover;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  height: 60px;
+  width: 100%;
+}
+.light-bluebox a {
+  color: #3da08f;
+  border-bottom: 1px solid #3da08f;
+  padding-bottom: 4px;
+}
+
+.light-bluebox a > img {
+  margin-top: 2px;
+}
+
+.textimonial-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 1.4rem;
+  width: 80%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+.user .imgwrapper {
+  margin: 0;
+}
+.user img {
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  height: 40px;
+  width: 40px;
+}
+.user h4 {
+  margin: 0;
 }
