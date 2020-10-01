@@ -61,6 +61,7 @@ nav {
 
 nav > ul {
   display: flex;
+  align-items: center;
 }
 
 nav > ul > li {
@@ -71,6 +72,7 @@ nav ul a {
   color: hsl(243, 87%, 12%);
   font-family: "Raleway", sans-serif;
 }
+
 form {
   display: flex;
 }
@@ -244,6 +246,10 @@ footer .attribution a {
 
   header form button {
     margin: 1.2rem 0;
+  }
+
+  nav > ul {
+    display: none;
   }
 
   .light-bluebox::before {
