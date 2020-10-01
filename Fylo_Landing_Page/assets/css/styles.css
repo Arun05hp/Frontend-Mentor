@@ -8,12 +8,20 @@ img {
 }
 ul {
   list-style: none;
+  padding: 0;
 }
 a {
   text-decoration: none;
 }
-input {
+input,
+button {
   outline: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+input::placeholder {
+  color: hsl(0, 0%, 75%);
 }
 h1,
 h2 {
@@ -30,9 +38,8 @@ body {
   max-width: 1200px;
 }
 
-header,
-section {
-  padding: 2rem;
+header {
+  padding: 3rem;
 }
 
 .flexbox {
@@ -72,8 +79,8 @@ header .flexbox {
 }
 header input {
   flex: 0.5;
-  border: 1px solid hsl(243, 87%, 12%);
-  border-radius: 2px;
+  border: 1px solid#8b8995;
+  border-radius: 4px;
   padding: 0.8rem;
 }
 
@@ -95,13 +102,14 @@ button {
 .light-bluebox {
   background-color: hsl(240, 75%, 98%);
   margin-top: 6rem;
-  padding: 3rem 2rem;
+  padding: 3rem;
   position: relative;
 }
 
 .light-bluebox::before {
   content: "";
   background-image: url("../images/bg-curve-desktop.svg");
+  background-position: center center;
   background-size: cover;
   position: absolute;
   top: -60px;
@@ -143,4 +151,142 @@ button {
 }
 .user h4 {
   margin: 0;
+}
+
+.bluebox {
+  background-color: hsl(238, 22%, 44%);
+  color: #fff;
+  padding: 4rem 3rem;
+}
+
+.bluebox form {
+  flex-direction: column;
+  margin-left: 1.2rem;
+}
+
+.bluebox form input {
+  flex: 1;
+  border: 1px solid#8b8995;
+  border-radius: 4px;
+  padding: 0.8rem;
+}
+
+.bluebox form button {
+  margin: 1rem 0;
+  width: 50%;
+}
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  color: #fff;
+  padding: 4rem 3rem;
+}
+
+footer .flexbox {
+  align-items: flex-start;
+}
+footer ul {
+  flex: 1;
+}
+footer ul li {
+  margin-bottom: 20px;
+}
+
+footer .social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer ul a {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  height: 40px;
+  width: 40px;
+}
+
+footer .attribution {
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  header {
+    padding: 2rem 3rem;
+  }
+
+  header .flexbox,
+  .light-bluebox .flexbox {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  header form {
+    flex-direction: column;
+  }
+
+  header form input {
+    flex: 1;
+    margin-top: 2rem;
+  }
+
+  header form button {
+    margin: 1.2rem 0;
+  }
+
+  .light-bluebox::before {
+    content: "";
+    background-image: url("../images/bg-curve-mobile.svg");
+    height: 80px;
+    top: -80px;
+  }
+
+  .textimonial-wrapper {
+    width: 100%;
+    text-align: left;
+  }
+
+  .bluebox .flexbox {
+    flex-direction: column;
+  }
+
+  .bluebox .flexbox > div {
+    width: 100%;
+  }
+
+  .bluebox form {
+    margin: 0;
+  }
+
+  .bluebox form button {
+    width: 100%;
+  }
+
+  footer {
+    text-align: left;
+  }
+  footer img {
+    margin-bottom: 1.2rem;
+  }
+
+  footer .flexbox {
+    flex-direction: column;
+  }
+
+  footer .social-links {
+    text-align: center;
+    width: 100%;
+  }
 }
