@@ -32,7 +32,7 @@ body {
 
 header,
 section {
-  padding: 1.2rem;
+  padding: 2rem;
 }
 
 .flexbox {
@@ -57,7 +57,7 @@ nav > ul {
 }
 
 nav > ul > li {
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
 }
 
 nav ul a {
@@ -95,7 +95,7 @@ button {
 .light-bluebox {
   background-color: hsl(240, 75%, 98%);
   margin-top: 6rem;
-  padding: 3rem 1.2rem;
+  padding: 3rem 2rem;
   position: relative;
 }
 
