@@ -57,6 +57,38 @@ nav {
   align-items: center;
   margin: 1.5rem 0;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .bars {
+  width: 45px;
+  height: 45px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bars span {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background-color: hsl(243, 87%, 12%);
+  margin-bottom: 0.4rem;
+}
+
+.bars span:nth-child(2) {
+  width: 50%;
+}
+
+.bars span:last-child {
+  margin: 0;
+}
+
+.bars:hover span {
+  width: 100%;
+  transition: 0.2s ease-in-out;
 }
 
 nav > ul {
@@ -71,6 +103,8 @@ nav > ul > li {
 nav ul a {
   color: hsl(243, 87%, 12%);
   font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 form {
@@ -229,6 +263,33 @@ footer .attribution a {
     padding: 2rem 3rem;
   }
 
+  nav .bars {
+    display: flex;
+  }
+
+  nav ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  nav ul.show {
+    flex-direction: column;
+    border: 1px solid #f0f0f0;
+    visibility: visible;
+    opacity: 1;
+  }
+  nav ul li {
+    margin: 0;
+    padding: 0.8rem 0;
+    width: 100%;
+  }
+  .logo {
+    width: 120px;
+  }
+
   header .flexbox,
   .light-bluebox .flexbox {
     flex-direction: column;
@@ -246,10 +307,6 @@ footer .attribution a {
 
   header form button {
     margin: 1.2rem 0;
-  }
-
-  nav > ul {
-    display: none;
   }
 
   .light-bluebox::before {
